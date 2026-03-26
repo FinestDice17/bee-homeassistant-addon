@@ -1,5 +1,5 @@
 name: Bee Backend
-version: "0.1.0"
+version: "0.1.1"
 slug: bee_backend
 description: Bee backend service for Home Assistant
 url: https://github.com/finestdice17/bee-homeassistant-addon
