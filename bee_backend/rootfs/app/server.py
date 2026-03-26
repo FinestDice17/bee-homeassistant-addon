@@ -8,6 +8,7 @@ from typing import Any
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
+print("Bee Backend server.py starting...", flush=True)
 app = FastAPI(title="Bee Backend", version="0.1.0")
 
 BEE_BINARY = os.getenv("BEE_BINARY_PATH", "/usr/local/bin/bee")
@@ -89,3 +90,8 @@ def create_todo(payload: TodoCreateRequest) -> Any:
         args.extend(["--alarm-at", payload.alarm_at])
     args.append("--json")
     return run_bee_command(args)
+
+if __name__ == "__main__":
+    import uvicorn
+    print("Starting Uvicorn on 0.0.0.0:8130", flush=True)
+    uvicorn.run(app, host="0.0.0.0", port=8130)
