@@ -1,2 +1,2 @@
 #!/usr/bin/with-contenv bashio
-python3 /app/server.py
+exec /opt/venv/bin/python /app/server.py
