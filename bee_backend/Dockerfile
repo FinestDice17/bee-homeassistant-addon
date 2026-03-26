@@ -11,4 +11,6 @@ RUN apk add --no-cache \
 COPY rootfs/ /
 RUN chmod a+x /etc/services.d/bee_backend/run
 
-RUN pip3 install --no-cache-dir -r /app/requirements.txt
+RUN python3 -m venv /opt/venv
+RUN /opt/venv/bin/pip install --no-cache-dir --upgrade pip
+RUN /opt/venv/bin/pip install --no-cache-dir -r /app/requirements.txt
