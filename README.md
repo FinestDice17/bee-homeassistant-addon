@@ -64,6 +64,9 @@ webhook_url: ""
 | `bee_binary_path` | Path to the Bee CLI binary                  |
 | `webhook_url`     | Optional webhook for realtime event pushing |
 
+🔗 API Endpoints
+The backend exposes the following endpoints:
+
 | Endpoint  | Description               |
 | --------- | ------------------------- |
 | `/health` | Check backend status      |
@@ -73,6 +76,23 @@ webhook_url: ""
 | `/now`    | Recent conversations      |
 | `/facts`  | Stored facts              |
 | `/todos`  | Task list                 |
+
+Create a todo
+~~~
+curl -X POST http://<ip>:8130/todos \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Buy more clippers"}'
+~~~
+
+🔄 Realtime (Coming Soon)
+
+Future versions will support:
+
+- Live speech detection events
+- Instant notifications
+- Webhook-based updates to Home Assistant
+
+
 
 🧩 Integration
 
