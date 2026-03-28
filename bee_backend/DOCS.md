@@ -35,7 +35,7 @@ Once started, the backend will be available at:
 
 - http://homeassistant.local:8130
      or
-- http://<your-home-assistant-ip>:8130
+- http://your-home-assistant-ip:8130
 
 
 Test it:
